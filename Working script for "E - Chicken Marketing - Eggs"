@@ -1,0 +1,68 @@
+CREATE TABLE "E - Chicken Marketing - Eggs" AS
+SELECT
+"main_sheet".primary_key,
+"main_sheet".survey_date,
+"main_sheet".seca_a2_enum,
+"main_sheet"."seca_a17_gps-Latitude",
+"main_sheet"."seca_a17_gps-Longitude",
+"main_sheet"."seca_a17_gps-Altitude",
+"main_sheet"."seca_a17_gps-Accuracy",
+"main_sheet"."seca_a17_list-seca_a3_gender",
+"main_sheet".seca_a11_state,
+"main_sheet".seca_a11_snd,
+"main_sheet".seca_a12_village,
+"main_sheet".seca_a13_km_hh_road,
+ 
+"main_sheet".sece_e1_eggs_sold,
+"main_sheet"."grp__eggs_sold-sece_e2_breed",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-1",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-2",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-3",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-4",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-5",
+"main_sheet"."grp__eggs_sold-sece_e2_breed-6",
+"main_sheet"."grp__eggs_sold-rpt_e2_breed_count",
+
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_cur_breed",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_cur_breed_label",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-1",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-2",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-3",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-4",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-5",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-6",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-7",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-8",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-sece_e2_mkt_channel-other",
+"grp__eggs_sold-rpt_e2_breed"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt_count",
+ 
+ 
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_cur_mkt",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_cur_mkt_label",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_egg_price",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_no_days",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_no_sold",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_pay_mode",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-1",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-2",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-3",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-4",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-5",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-6",
+"-rpt_e2_breed-rpt_e2_mkt"."rpt_e2_breed-rpt_e2_mkt-sece_e2_sale_reason-other",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_sell_who_decide",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_trans_mode",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_dist_sale_place",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_who_paid",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_trans_cost",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_who_paid_other",
+"-rpt_e2_breed-rpt_e2_mkt"."grp__eggs_sold-rpt_e2_breed-rpt_e2_mkt-sece_e2_trans_mode_other" 
+ 
+FROM
+"main_sheet" "main_sheet" 
+INNER JOIN "grp__eggs_sold-rpt_e2_breed" "grp__eggs_sold-rpt_e2_breed" 
+ON "main_sheet"."primary_key" = "grp__eggs_sold-rpt_e2_breed"."secondary_key" 
+INNER JOIN "-rpt_e2_breed-rpt_e2_mkt" "-rpt_e2_breed-rpt_e2_mkt" 
+ON "grp__eggs_sold-rpt_e2_breed"."primary_key" = "-rpt_e2_breed-rpt_e2_mkt"."secondary_key"
