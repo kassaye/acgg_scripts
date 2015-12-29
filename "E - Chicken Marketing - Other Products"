@@ -1,0 +1,69 @@
+CREATE TABLE "E - Chicken Marketing - Other Products" AS
+SELECT
+"main_sheet".primary_key,
+"main_sheet".survey_date,
+"main_sheet".seca_a2_enum,
+"main_sheet"."seca_a17_gps-Latitude",
+"main_sheet"."seca_a17_gps-Longitude",
+"main_sheet"."seca_a17_gps-Altitude",
+"main_sheet"."seca_a17_gps-Accuracy",
+"main_sheet"."seca_a17_list-seca_a3_gender",
+"main_sheet".seca_a11_state,
+"main_sheet".seca_a11_snd,
+"main_sheet".seca_a12_village,
+"main_sheet".seca_a13_km_hh_road,
+ 
+"main_sheet".sece_e3_products_sold,
+"main_sheet"."grp_e3_-sece_e4_product_type",
+"main_sheet"."grp_e3_-sece_e4_product_type-2",
+"main_sheet"."grp_e3_-sece_e4_product_type-3",
+"main_sheet"."grp_e3_-sece_e4_product_type-4",
+"main_sheet"."grp_e3_-sece_e4_product_type-other",
+"main_sheet"."grp_e3_-rpt_e4_product_count",
+ 
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_cur_product", 
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_cur_product_label",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-1",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-2",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-3",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-4",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-5",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-6",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-7",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-8",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-sece_e4_mkt_channel-other",
+"grp_e3_-rpt_e4_product"."grp_e3_-rpt_e4_product-rpt_e4_mkt_count",
+ 
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_cur_mkt",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_cur_mkt_label",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed", 
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-1",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-2",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-3",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-4",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-5",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-sece_e4_breed-6",
+"-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-rpt_e4_breed_count",
+
+-- "-rpt_e4_product-rpt_e4_mkt"."grp_e3_-rpt_e4_product-rpt_e4_mkt-rpt_e4_breed",
+-- fiels of -rpt_e4_mkt-rpt_e4_breed should follow here, however the problem is : - 
+-- Table -rpt_e4_mkt-rpt_e4_breed appears to have mismatched referencial key
+ 
+"main_sheet".secd_e_answering,
+"main_sheet"."secd_e_answering-1",
+"main_sheet"."secd_e_answering-2",
+"main_sheet"."secd_e_answering-3",
+"main_sheet"."secd_e_answering-4",
+"main_sheet"."secd_e_answering-5",
+"main_sheet"."secd_e_answering-other",
+"main_sheet"."secd_e_knowledgeable"
+ 
+FROM
+"main_sheet" "main_sheet" 
+ INNER JOIN "grp_e3_-rpt_e4_product" "grp_e3_-rpt_e4_product" 
+ ON "main_sheet"."primary_key" = "grp_e3_-rpt_e4_product"."secondary_key" 
+  INNER JOIN "-rpt_e4_product-rpt_e4_mkt" "-rpt_e4_product-rpt_e4_mkt" 
+  ON "grp_e3_-rpt_e4_product"."primary_key" = "-rpt_e4_product-rpt_e4_mkt"."secondary_key"
+   --INNER JOIN "-rpt_e4_mkt-rpt_e4_breed" "-rpt_e4_mkt-rpt_e4_breed" 
+   --ON "-rpt_e4_product-rpt_e4_mkt"."primary_key" = "-rpt_e4_mkt-rpt_e4_breed"."secondary_key"
